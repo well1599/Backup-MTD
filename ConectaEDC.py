@@ -23,13 +23,14 @@ def conectaEDC():
         
     #resources = ('RSC_GDC_HIVE_GOLD', 'RSC_GDC_DTB_H')
         
-    ofset500 ='RSC_GDC_HIVE_H','RSC_DIC_HIVE_H'
+    ofset500 = 'RSC_GDC_HIVE_H','RSC_DIC_HIVE_H'
     erros = 'RSC_GDC_HIVE_BRONZE_1','RSC_GDC_DTB_BRONZE', 'RSC_GDC_DTB_SILVER', 'RSC_GDC_HIVE_BRONZE_3', 'RSC_GDC_HIVE_H'
     #resorces = ('RSC_GDC_DTB_BRONZE', 'RSC_GDC_DTB_SILVER', 'RSC_GDC_HIVE_BRONZE_1')
 
     resources = ('RSC_GDC_HIVE_GOLD', 'RSC_GDC_DTB_H','RSC_GDC_DTB_GOLD','RSC_GDC_HIVE_SMART',
                 'RSC_GDC_HIVE_DATASHARING','RSC_GDC_HIVE_BRONZE_2','RSC_DIC_DTB_H',
-                'RSC_DIC_HIVE_DATASHARING','RSC_DIC_HIVE_SMART', 'RSC_GDC_HIVE_SILVER')
+                'RSC_DIC_HIVE_DATASHARING','RSC_DIC_HIVE_SMART','RSC_GDC_HIVE_SILVER')
+        
     for resource in resources:
         fq = f"fq-id%3A*{resource}*%2F*%2F*"
         fq1 = 'fq-core.classType%3A%22com.infa.ldm.relational.Table%22or%20%22com.infa.ldm.relational.View%22'
@@ -50,7 +51,7 @@ def conectaEDC():
             resultado = json_2.json()
             for key in resultado['items']:
                 print(key['id'])
-                ids[key['id']] = [key['id'],'','','','','','','','','','','','','','','','','','']
+                ids[key['id']] = [key['id'],'','','','','','','','','','','','','','','','','',''.''.''.''.'']
             for mtd in key['facts']:
                 if mtd['attributeId'] == 'core.name':
                     print(mtd['value'])
@@ -117,7 +118,7 @@ def conectaEDC():
             if mtd['attributeId'] =='com.infa.appmodels.ldm.LDM_633f6cce_706c_4e97_bd70_2c43aefc7ff5':
                 print(mtd['value'])
                 ids[key['id']][17] = mtd['value']
-            if mtd['attributeId'] == 'com.infa.appmodels.ldm.LDM_3c39fda9_69e2_4fdd_982c_e829813443f8': #Pontos 1 
+            if mtd['attributeId'] == 'com.infa.appmodels.ldm.LDM_3c39fda9_69e2_4fdd_982c_e829813443f8': #Pontos
                 print(mtd['value'])
                 ids[key['id']][18] = mtd['value']
             if mtd['attributeId'] == 'com.infa.appmodels.ldm.LDM_2f083890_a144_4b12_90ea_a532f3c8dbab': #SLA
