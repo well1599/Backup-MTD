@@ -11,7 +11,7 @@ time_incial = time.time()
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-ambiente = 'https://datacatalog.*********'
+ambiente = 'https://datacatalog.*********' # url da API SUEGGER
 
 api = '/access/2/catalog/data/objects?'
 
