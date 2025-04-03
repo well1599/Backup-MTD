@@ -11,7 +11,7 @@ time_incial = time.time()
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-ambiente = 'https://datacatalog.*********' # url da API SUEGGER
+ambiente = 'https://datacatalog.*********' # url da API do SUEGGER
 
 api = '/access/2/catalog/data/objects?'
 
@@ -76,7 +76,7 @@ def conectaEDC():
             if mtd['attributeId'] == 'com.infa.appmodels.ldm.LDM_afb31a87_649e_4475_98bd_567ba2a8660c':
                 print(mtd['value']) 
                 ids[key['id']][3] = mtd['value']
-            if mtd['attributeId'] == "com.infa.ldm.ootb.enrichments.businessDescription":
+            if mtd['attributeId'] == "com.infa.ldm.ootb.enrichments.businessDescription": #Business Desc.
                 print(mtd['value'])
                 ids[key['id']][4] = mtd['value'] 
             if mtd['attributeId'] == 'com.infa.appmodels.ldm.LDM_aebe9fb6_5019_4e42_a4b7_611329fed3fe':
@@ -88,7 +88,7 @@ def conectaEDC():
             if mtd['attributeId'] == 'com.infa.appmodels.ldm.LDM_210d7486_02b5_4b31_87cf_055bce2e740c':
                 print(mtd['value'])
                 ids[key['id']][7] = mtd['value']
-            if mtd['attributeId'] == 'com.infa.ldm.ootb.enrichments.dataOwner':
+            if mtd['attributeId'] == 'com.infa.ldm.ootb.enrichments.dataOwner': # Data Owner
                 print(mtd['value'])
                 ids[key['id']][8] = mtd['value']
             if mtd['attributeId'] == 'com.infa.ldm.ootb.enrichments.dataSteward':
@@ -118,7 +118,7 @@ def conectaEDC():
             if mtd['attributeId'] =='com.infa.appmodels.ldm.LDM_633f6cce_706c_4e97_bd70_2c43aefc7ff5':
                 print(mtd['value'])
                 ids[key['id']][17] = mtd['value']
-            if mtd['attributeId'] == 'com.infa.appmodels.ldm.LDM_3c39fda9_69e2_4fdd_982c_e829813443f8': #Pontos
+            if mtd['attributeId'] == 'com.infa.appmodels.ldm.LDM_3c39fda9_69e2_4fdd_982c_e829813443f8': #Pontos Focais
                 print(mtd['value'])
                 ids[key['id']][18] = mtd['value']
             if mtd['attributeId'] == 'com.infa.appmodels.ldm.LDM_2f083890_a144_4b12_90ea_a532f3c8dbab': #SLA
