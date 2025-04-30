@@ -1,3 +1,4 @@
+#Para conectar ao EDC (Catalogo de dados)
 import getpass
 import base64
 
